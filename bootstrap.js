@@ -50,17 +50,19 @@ var windowListener = {
 		}, false);
 	},
 	onCloseWindow: function(aWindow) {
+		var win = aWindow.QueryInterface(Ci.nsIInterfaceRequestor).
+		                  getInterface(Ci.nsIDOMWindowInternal || Ci.nsIDOMWindow);
+		if (win)
+			unloadFromWindow(win);
 	},
 	onWindowTitleChange: function(aWindow) {
 	},
 };
 
-var gMenuId;
-
 // called when opening a browser window
 function loadIntoWindow(aWindow) {
 	// add menu item
-	gMenuId = aWindow.NativeWindow.menu.add(getString("menu"), null, function() {
+	aWindow._viewSourceMenuId = aWindow.NativeWindow.menu.add(getString("menu"), null, function() {
 		viewSource(aWindow);
 	});
 }
@@ -68,7 +70,7 @@ function loadIntoWindow(aWindow) {
 // called when closing a browser window
 function unloadFromWindow(aWindow) {
 	// remove menu item
-	aWindow.NativeWindow.menu.remove(gMenuId);
+	aWindow.NativeWindow.menu.remove(aWindow._viewSourceMenuId);
 }
 
 function viewSource(aWindow) {
