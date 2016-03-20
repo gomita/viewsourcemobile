@@ -20,6 +20,13 @@
 				<em:homepageURL>http://www.xuldev.org/</em:homepageURL>
 			</Description>
 		</em:localized>
+		<em:localized>
+			<Description>
+				<em:locale>zh-TW</em:locale>
+				<em:description>在選單中加入「檢視原始碼」功能。</em:description>
+				<em:translator>Danny Lin</em:translator>
+			</Description>
+		</em:localized>
 		<em:homepageURL>http://www.xuldev.org/</em:homepageURL>
 		<em:targetApplication>
 			<Description>
