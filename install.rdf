@@ -20,12 +20,19 @@
 				<em:homepageURL>http://www.xuldev.org/</em:homepageURL>
 			</Description>
 		</em:localized>
+		<em:localized>
+			<Description>
+				<em:locale>zh-TW</em:locale>
+				<em:description>在選單中加入「檢視原始碼」功能。</em:description>
+				<em:translator>Danny Lin</em:translator>
+			</Description>
+		</em:localized>
 		<em:homepageURL>http://www.xuldev.org/</em:homepageURL>
 		<em:targetApplication>
 			<Description>
 				<em:id>{aa3c5121-dab2-40e2-81ca-7ea25febc110}</em:id>
 				<em:minVersion>15.0</em:minVersion>
-				<em:maxVersion>18.0a1</em:maxVersion>
+				<em:maxVersion>45.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
 	</Description>
